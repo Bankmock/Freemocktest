@@ -1,0 +1,192 @@
+<!doctype html> 
+<html lang="en"> 
+<head>    
+<meta charset="UTF-8">    
+<title>Mock Test Summery</title> 
+<style >
+
+ html, body {
+	margin: 25px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: auto;
+	font-size: 18px;
+	 background-color: black; 
+	color: green;
+   
+}
+
+td {
+text-align:center;
+}
+
+</style>
+
+
+
+
+</head> 
+<body >    
+<h1>Overall Performance Summery</h1>   
+
+<table border = "1">      
+         
+       
+         
+ <tr>                <th ><h2 >not Available/100</h2><br> <hr><span>Rank</span</th>
+ 
+                    <th > <h2> <span id="tmarks"> </span>/100</h2> <br> <hr><span>Total Score</span> </th>
+ 
+                    <th > <h2> <span id="tcorrectanser"> </span>/100</h2> <br> <hr><span>Total Correct</span> </th>
+ 
+                    <th > <h2> <span id="tchecked"> </span>/100</h2> <br> <hr><span>Attempted</span> </th>
+ 
+ 
+ 
+ 
+ </tr> 
+  
+
+ 
+ </table>   
+
+ 
+
+<h1>Sectional Summery</h1>   
+ <table border = "1">      
+        
+        
+         
+ <tr>        
+                    <th>S. No. </th>
+                    <th>Section Name</th>
+                    <th>Attempted</th>
+                    <th>Correct Answers</th> 
+ 
+                   <th>Wrong Answers</th> 
+                   <th> Your Marks</th> 
+ </tr>            
+ <tr>        
+                 <td>1</td>
+                 <td>English Language</td>
+                 <td><h3> <span id='echecked'> </span></h3> </td>
+                 <td><h3><span id="ecorrectanser"></span> </h3>  </td> 
+                 <td><h3><span id="ewronganser"></span> <h3> </td> 
+                 <td><h3><span id="emarks"></span> </h3>  </td> 
+ </tr>         
+<tr>        
+                 <td>2</td>
+                 <td>Quantitative Aptitude</td>
+                  <td><h3> <span id='qchecked'></span></h3> </td>
+                 <td><h3> <span id="qcorrectanser"></span> </h3> </td> 
+                 <td><h3><span id="qwronganser"></span> </h3>  </td> 
+                 <td>  <h3><span id="qmarks"></span> </h3>  </td> 
+ </tr>      
+          
+ <tr>        
+                 <td>3</td>
+                
+                 <td>Reasoning Ability</td>
+                 <td><h3> <span id='rchecked'></span></h3> </td>
+                 <td><h3><span id="rcorrectanser"></span>  </td>        
+                 <td><h3><span id="rwronganser"></span> </td>        
+                 <td><h3><span id="rmarks"></span>  </td>        
+ </tr>
+ 
+
+ 
+ </table>   
+<script onload> 
+
+
+let rcorrectanser = parseFloat(localStorage.getItem('rcorrectanser'), 10);
+ let ecorrectanser = parseFloat(localStorage.getItem('ecorrectanser'), 10);
+ let  qcorrectanser = parseFloat(localStorage.getItem('qcorrectanser'), 10);
+       let tcorrectanser = (rcorrectanser) + (ecorrectanser) + (qcorrectanser);
+ document.getElementById("tcorrectanser").innerHTML = tcorrectanser;
+ 
+ 
+ 
+let rmarks = parseFloat(localStorage.getItem('rmarks'), 10);
+ let emarks = parseFloat(localStorage.getItem('emarks'), 10);
+ let  qmarks = parseFloat(localStorage.getItem('qmarks'), 10);
+       let tmarks = (rmarks) + (emarks) + (qmarks);
+ 
+document.getElementById("tmarks").innerHTML = tmarks;
+ let rchecked = parseInt(localStorage.getItem('rchecked'), 10);
+ let echecked = parseInt(localStorage.getItem('echecked'), 10);
+ let qchecked = parseInt(localStorage.getItem('qchecked'), 10);
+     let tchecked = rchecked  + echecked + qchecked;
+ 
+
+document.getElementById("tchecked").innerHTML = tchecked;
+
+
+
+
+
+
+ document.getElementById("echecked").innerHTML = localStorage.getItem('echecked');
+ document.getElementById("ecorrectanser").innerHTML = localStorage.getItem('ecorrectanser');
+ document.getElementById("ewronganser").innerHTML = localStorage.getItem('ewanser');
+ document.getElementById("emarks").innerHTML = localStorage.getItem('emarks');
+ 
+ document.getElementById("qchecked").innerHTML = localStorage.getItem('qchecked');
+ document.getElementById("qcorrectanser").innerHTML = localStorage.getItem('qcorrectanser');
+ document.getElementById("qwronganser").innerHTML = localStorage.getItem('qwanser');
+ document.getElementById("qmarks").innerHTML = localStorage.getItem('qmarks');
+ 
+ document.getElementById("rchecked").innerHTML = localStorage.getItem('rchecked');
+ document.getElementById("rcorrectanser").innerHTML = localStorage.getItem('rcorrectanser');
+ document.getElementById("rwronganser").innerHTML = localStorage.getItem('rwanser');
+ document.getElementById("rmarks").innerHTML = localStorage.getItem('rmarks');
+ 
+</script>
+
+<script>
+window.onbeforeunload = function() {
+
+
+return 'are you sure you want to leave this page?';
+
+};
+
+</script>
+
+
+
+
+
+
+ 
+ <script unload>
+ 
+ localStorage.removeItem('echecked');
+  localStorage.removeItem('ecorrectanser');
+  localStorage.removeItem('ewanser');
+  localStorage.removeItem('emarks');
+  
+  localStorage.removeItem('qchecked');
+  localStorage.removeItem('qcorrectanser');
+  localStorage.removeItem('qwanser');
+  localStorage.removeItem('qmarks');
+  
+  localStorage.removeItem('rchecked');
+  localStorage.removeItem('rcorrectanser');
+  localStorage.removeItem('rwanser');
+  localStorage.removeItem('rmarks');
+  
+   
+ localStorage.removeItem('tchecked');
+  localStorage.removeItem('tcorrectanser');
+  
+  localStorage.removeItem('tmarks');
+  
+  
+</script>
+
+
+
+ </html>
+ 
+ 
